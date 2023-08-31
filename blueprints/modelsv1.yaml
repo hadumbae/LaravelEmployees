@@ -1,0 +1,14 @@
+models:
+  Company:
+    name: string:400
+    email: string:255 nullable
+    website: string:400 nullable
+    logo: string:400 nullable
+  Employee:
+    first_name: string:255
+    last_name: string:255
+    company_id: id foreign:companies.id
+    email: string:255 nullable
+    phone: string:100 nullable
+    relationships:
+      belongsTo: Company
